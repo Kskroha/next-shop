@@ -1,20 +1,23 @@
 import Link from "next/link";
+import styles from "./NavLink.module.css";
+import cn from "classnames";
+import Image from "next/image";
 
 type Props = {
   href: string;
   hasIcon: boolean;
   text: string;
-  iconPath?: string;
+  src?: string;
 };
 
 const NavLink = (props: Props) => {
-  const { href, hasIcon, text, iconPath } = props;
+  const { href, hasIcon, text, src } = props;
 
   return (
     <nav>
-      <Link href={href}>
-        <span className={hasIcon ? "visually-hidden" : ""}>{text}</span>
-        {hasIcon && <img src={iconPath} alt={text} />}
+      <Link className={cn("link", { icon: hasIcon })} href={href}>
+        <span className={hasIcon ? "visually-hidden" : "linkText"}>{text}</span>
+        {hasIcon && <img src={src ?? ""} alt={text} />}
       </Link>
     </nav>
   );

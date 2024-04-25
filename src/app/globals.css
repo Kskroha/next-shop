@@ -1,4 +1,78 @@
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/DMSans-Regular.woff2") format("woff2"),
+    url("/fonts/DMSans-Regular.woff2") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/DMSans-Medium.woff2") format("woff2"),
+    url("/fonts/DMSans-Medium.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/DMSans-Bold.woff2") format("woff2"),
+    url("/fonts/DMSans-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --gold: #a18a68;
+  --light-grey: #efefef;
+  --dark-grey: #707070;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  display: flex;
+  color: inherit;
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 .visually-hidden {
   position: fixed;
   transform: scale(0);
+}
+
+.layout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  overflow: hidden;
+  width: 80%;
 }

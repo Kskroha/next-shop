@@ -1,0 +1,27 @@
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.textLinks {
+  position: relative;
+  display: flex;
+  gap: 50px;
+}
+
+.textLinks::after {
+  position: absolute;
+  content: "";
+  top: 20%;
+  right: -50px;
+  width: 1px;
+  height: 17px;
+  background-color: #707070;
+}
+
+.iconLinks {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}

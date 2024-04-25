@@ -1,7 +1,7 @@
 export default function Catalog() {
   return (
     <main>
-      <p>Go</p>
+      <p>Catalog</p>
     </main>
   );
 }
