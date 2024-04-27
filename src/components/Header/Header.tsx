@@ -1,14 +1,12 @@
 import Link from "next/link";
 import Navbar from "../NavBar/NavBar";
-import styles from "./Header.module.css";
 import Image from "next/image";
 
 const Header = () => {
   return (
-    <header className={styles.header}>
-      <Link className={styles.link} href={"/"}>
+    <header className="py-5 flex self-auto justify-between items-center sans">
+      <Link href={"/"} className="">
         <Image
-          className={styles.logo}
           src={"/logo.svg"}
           alt="Логотип магазина"
           width={158}

@@ -1,14 +1,13 @@
 import NavLink from "../NavLink/NavLink";
-import styles from "./NavBar.module.css";
 
 const Navbar = () => {
   return (
-    <nav className={styles.nav}>
-      <div className={styles.textLinks}>
+    <nav className="after:absolute after:top-1/4 after:left-52 after:w-px after:h-4 after:bg-dark-grey flex items-center gap-24 relative">
+      <div className="flex gap-12">
         <NavLink href={"/catalog"} hasIcon={false} text={"Магазин"} />
         <NavLink href={"/about"} hasIcon={false} text={"О нас"} />
       </div>
-      <div className={styles.iconLinks}>
+      <div className="flex items-center gap-7">
         <NavLink
           href={"/cart"}
           hasIcon={true}

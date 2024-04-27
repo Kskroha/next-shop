@@ -1,5 +1,4 @@
 import Link from "next/link";
-import styles from "./NavLink.module.css";
 import cn from "classnames";
 import Image from "next/image";
 
@@ -17,10 +16,27 @@ const NavLink = (props: Props) => {
     <nav>
       <Link className={cn("link", { icon: hasIcon })} href={href}>
         <span className={hasIcon ? "visually-hidden" : "linkText"}>{text}</span>
-        {hasIcon && <img src={src ?? ""} alt={text} />}
+        {hasIcon && <Image src={src ?? ""} alt={text} width={21} height={21} />}
       </Link>
     </nav>
   );
 };
 
 export default NavLink;
+
+// .link {
+//   padding: 7px 10px;
+// }
+
+// .linkText {
+//   font-size: 16px;
+//   line-height: 27px;
+// }
+
+// .icon {
+//   padding: 10px 10px;
+// }
+
+// .icon img {
+//   display: block;
+// }

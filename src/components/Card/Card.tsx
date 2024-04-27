@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./Card.module.css";
+import Image from "next/image";
 
 type Props = {
   src: string;
@@ -12,16 +12,16 @@ const Card = (props: Props) => {
   const { src, name, price, sku } = props;
 
   return (
-    <Link className={styles.card} href={`/catalog/${String(sku)}`}>
-      <img
-        className={styles.image}
+    <Link className="flex flex-col" href={`/catalog/${String(sku)}`}>
+      <Image
+        className="mb-4 rounded-lg"
         src={src}
         alt={name}
         width={377}
         height={380}
       />
-      <h3 className={styles.name}>{name}</h3>
-      <span className={styles.price}>$&nbsp;{price},00</span>
+      <h3 className="m-0 mb-16px text-xl font-normal black">{name}</h3>
+      <span className="text-xl text-gold">$&nbsp;{price},00</span>
     </Link>
   );
 };
