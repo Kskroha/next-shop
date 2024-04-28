@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <header className="py-5 flex self-auto justify-between items-center sans">
+    <header className="py-5 flex self-auto justify-between items-center sans border-b border-px border-neutral">
       <Link href={"/"} className="">
         <Image
           src={"/logo.svg"}
