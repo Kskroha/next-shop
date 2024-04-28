@@ -1,8 +1,18 @@
+import Link from "next/link";
 import Navbar from "../NavBar/NavBar";
+import Image from "next/image";
 
 const Header = () => {
   return (
-    <header>
+    <header className="py-5 flex self-auto justify-between items-center sans border-b border-px border-neutral">
+      <Link href={"/"} className="">
+        <Image
+          src={"/logo.svg"}
+          alt="Логотип магазина"
+          width={158}
+          height={47}
+        />
+      </Link>
       <Navbar />
     </header>
   );
