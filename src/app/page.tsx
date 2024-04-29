@@ -1,13 +1,11 @@
 import Card from "@/components/Card/Card";
 import Slider from "@/components/Slider/Slider";
 import dataSlider from "@/components/Slider/slider-data.json";
-import styles from "./page.module.css";
 import Link from "next/link";
+import { API } from "./api/api";
 
 const getProducts = async () => {
-  const res = await fetch(
-    `https://purpleschool.ru/api-demo/products?limit=6&offset=0`
-  );
+  const res = await fetch(`${API.products.get}?limit=6&offset=0`);
 
   if (!res.ok) {
     throw new Error("failed to fetch");
