@@ -3,6 +3,7 @@ import Slider from "@/components/Slider/Slider";
 import dataSlider from "@/components/Slider/slider-data.json";
 import Link from "next/link";
 import { API } from "./api/api";
+import Search from "@/components/Search/Search";
 
 const getProducts = async () => {
   const res = await fetch(`${API.products.get}?limit=6&offset=0`);
@@ -19,9 +20,12 @@ export default async function Home() {
   console.log(products);
 
   return (
-    <main>
+    <main className="grow min-h-screen">
       <h1 className="visually-hidden">Магазин аксессуаров</h1>
-      <section className="pt-3">
+      <div className="sm:hidden">
+        <Search />
+      </div>
+      <section className="pt-4 sm:pt-3">
         <Slider data={dataSlider} />
       </section>
       <section className="py-10">

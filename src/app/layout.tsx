@@ -14,9 +14,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="h-full flex flex-col m-0">
-        <div className="my-0 mx-auto text-normal overflow-hidden w-10/12">
+    <html lang="ru">
+      <body>
+        <div className="my-0 mx-auto flex flex-col text-normal overflow-hidden w-10/12">
           <Header />
           {children}
           <Footer />

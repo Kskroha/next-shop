@@ -1,22 +1,24 @@
 import Link from "next/link";
-import cn from "classnames";
 import Image from "next/image";
 
 type Props = {
   href: string;
   hasIcon: boolean;
+  onlyIcon?: boolean;
   text: string;
   src?: string;
 };
 
 const NavLink = (props: Props) => {
-  const { href, hasIcon, text, src } = props;
+  const { href, hasIcon, onlyIcon, text, src } = props;
 
   return (
     <nav>
-      <Link className={cn("link", { icon: hasIcon })} href={href}>
-        <span className={hasIcon ? "visually-hidden" : "linkText"}>{text}</span>
+      <Link className="flex gap-3" href={href}>
         {hasIcon && <Image src={src ?? ""} alt={text} width={21} height={21} />}
+        <span className={hasIcon && onlyIcon ? "visually-hidden" : "text-xl"}>
+          {text}
+        </span>
       </Link>
     </nav>
   );

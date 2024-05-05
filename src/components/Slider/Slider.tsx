@@ -23,7 +23,7 @@ interface DemoSliderProps {
 const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
   return (
     <section className="w-full">
-      <div className=" h-156">
+      <div className="h-156">
         <ul className="h-156 w-full">
           <Swiper
             pagination={{ type: "bullets", clickable: true }}
@@ -47,7 +47,7 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
                     <p className="text-3xl font-light text-white mb-12">
                       $&nbsp;{price},00
                     </p>
-                    <button className="text-s text-white font-bold bg-transparent border-solid border-2 border-white py-3 px-5 min-w-44 rounded-md hover:bg-white hover:text-black">
+                    <button className="text-s text-white font-bold bg-transparent border-solid border-2 border-white py-3 px-5 min-w-44 rounded sm:rounded-md hover:bg-white hover:text-black">
                       Смотреть
                     </button>
                   </div>
