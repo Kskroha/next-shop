@@ -8,7 +8,7 @@ const BurgerButton = (props: Props) => {
 
   return (
     <button
-      className="flex flex-col gap-1 sm:hidden"
+      className="flex flex-col gap-1 sm:hidden ml-4"
       onClick={handleMenuButtonClick}
     >
       <span className="visually-hidden">Открыть меню</span>

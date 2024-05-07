@@ -2,6 +2,7 @@
 import { useState } from "react";
 import NavLink from "../NavLink/NavLink";
 import Search from "../Search/Search";
+import CountButton from "../CountButton/CountButton";
 
 const Navbar = () => {
   const [searchActive, setSearchActive] = useState(false);
@@ -9,16 +10,16 @@ const Navbar = () => {
   const handleSearchButtonClick = () => setSearchActive(true);
 
   return (
-    <nav className="after:absolute after:top-1/4 after:left-52 after:w-px after:h-4 after:bg-dark-grey after:md:block after:sm:hidden items-center md:gap-24 sm:gap-20 relative hidden sm:flex">
-      <div className="flex sm:gap-7 md:gap-12">
+    <nav className="after:absolute after:top-1/4 after:left-52 after:w-px after:h-4 after:bg-dark-grey after:md:block after:sm:hidden items-center md:gap-24 sm:gap-20 relative sm:flex ml-auto sm:ml-0">
+      <div className="sm:flex sm:gap-7 md:gap-12 hidden">
         <NavLink href={"/catalog"} hasIcon={false} text={"Магазин"} />
         <NavLink href={"/about"} hasIcon={false} text={"О нас"} />
       </div>
-      <div className="flex items-center gap-7">
+      <div className="flex sm:items-center sm:gap-7">
         <div>
           {searchActive && <Search />}
           <button
-            className={`${searchActive ? "hidden" : "block"}`}
+            className={`${searchActive ? "hidden" : "hidden sm:block"}`}
             onClick={handleSearchButtonClick}
           >
             <svg
@@ -41,27 +42,29 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <NavLink
+        <CountButton
           href={"/cart"}
-          hasIcon={true}
-          onlyIcon={true}
           text={"Корзина товаров"}
           src={"/cart.svg"}
+          length={3}
         />
-        <NavLink
-          href={"/favorites"}
-          hasIcon={true}
-          onlyIcon={true}
-          text={"Избранное"}
-          src={"/favorites.svg"}
-        />
-        <NavLink
-          href={"/profile"}
-          hasIcon={true}
-          onlyIcon={true}
-          text={"Личный кабинет"}
-          src={"/profile.svg"}
-        />
+        <div className="hidden sm:block">
+          <CountButton
+            href={"/favorites"}
+            text={"Избранное"}
+            src={"/favorites.svg"}
+            length={100}
+          />
+        </div>
+        <div className="hidden sm:block">
+          <NavLink
+            href={"/profile"}
+            hasIcon={true}
+            onlyIcon={true}
+            text={"Личный кабинет"}
+            src={"/profile.svg"}
+          />
+        </div>
       </div>
     </nav>
   );

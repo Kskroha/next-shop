@@ -23,8 +23,8 @@ interface DemoSliderProps {
 const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
   return (
     <section className="w-full">
-      <div className="h-88 sm:h-156">
-        <ul className="h-88 sm:h-156 w-full">
+      <div className="h-88 sm:h-162">
+        <ul className="h-88 sm:h-162 w-full">
           <Swiper
             pagination={{ type: "bullets", clickable: true }}
             autoplay={true}
@@ -39,7 +39,7 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
                     background: `url(${image}) center center / cover scroll no-repeat`,
                   }}
                 />
-                <div className="relative z-10 h-80 translate-y-20 sm:h-162 flex items-center pl-2 sm:pl-10">
+                <div className="relative z-10 h-80 translate-y-20 sm:translate-y-0 sm:h-162 flex items-center pl-2 sm:pl-10">
                   <div>
                     <p className="text-xl sm:text-4xl font-normal text-white mb-1 sm:mb-4">
                       {name}
