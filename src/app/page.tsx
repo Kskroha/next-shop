@@ -30,14 +30,17 @@ export default async function Home() {
       </section>
       <section className="py-10">
         <div className="flex justify-between items-end mb-10">
-          <h2 className="m-0 text-black text-3xl sans">
+          <h2 className="m-0 text-black text-base sm:text-3xl sans">
             Последние поступления
           </h2>
-          <Link className="text-gold text-xl text-light" href={"/catalog"}>
+          <Link
+            className="text-gold text-sm sm:text-xl text-light"
+            href={"/catalog"}
+          >
             Все
           </Link>
         </div>
-        <div className="grid justify-center gap-y-12 gap-x-20 grid-cols-3">
+        <div className="grid gap-y-6 gap-x-4 sm:gap-y-12 sm:gap-x-20 grid-cols-2 sm:grid-cols-3">
           {products &&
             products.map((product: Product) => (
               <Card
@@ -46,6 +49,7 @@ export default async function Home() {
                 name={product.name}
                 price={product.price}
                 sku={product.sku}
+                discount={product?.discount}
               />
             ))}
         </div>

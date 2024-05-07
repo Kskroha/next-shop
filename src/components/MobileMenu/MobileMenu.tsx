@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import NavLink from "../NavLink/NavLink";
 import Search from "../Search/Search";
 
@@ -8,9 +9,15 @@ type Props = {
 const MobileMenu = (props: Props) => {
   const { menuOpen } = props;
 
+  useEffect(() => {
+    menuOpen
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "auto");
+  }, [menuOpen]);
+
   return (
     <nav
-      className={`flex justify-center absolute top-[52px] right-0 z-10 bg-white w-full h-full pb-10 ${
+      className={`flex justify-center fixed top-[52px] right-0 z-10 bg-white w-full h-screen pb-10 ${
         menuOpen ? "sm:hidden" : "hidden"
       }`}
     >

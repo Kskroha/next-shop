@@ -12,6 +12,10 @@ module.exports = {
       sans: ["DMSans", "Arial", "sans-serif"],
       body: ["DMSans", "Arial", "sans-serif"],
     },
+    gridTemplateColumns: {
+      3: "repeat(auto-fit, minmax(380px, 1fr))",
+      2: "repeat(auto-fit, minmax(136px, 1fr))",
+    },
     extend: {
       colors: {
         transparent: "transparent",
@@ -20,10 +24,14 @@ module.exports = {
         gold: "#a18a68",
         "light-grey": "#efefef",
         "dark-grey": "#707070",
+        red: "#D82700",
       },
       spacing: {
         162: "40rem",
         99: "25rem",
+      },
+      height: {
+        88: "22rem",
       },
     },
   },

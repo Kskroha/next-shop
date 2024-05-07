@@ -4,52 +4,61 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="pt-9 pb-24 border-t border-px border-neutral">
-      <div className="flex justify-between items-end">
-        <ul className="flex gap-7 mb-12">
+    <footer className="py-4 sm:pt-9 sm:pb-24 sm:border-t border-px border-neutral">
+      <div className="flex flex-col sm:flex-row justify-between sm:items-end mb-9 sm-mb-0 gap-5 sm:gap-0">
+        <ul className="flex flex-col sm:flex-row gap-2 sm:gap-7 sm:mb-12">
           <li>
-            <a href="#" className="uppercase text-dark-grey text-base">
+            <a
+              href="#"
+              className="uppercase text-dark-grey text-xs sm:text-base"
+            >
               Контакты
             </a>
           </li>
           <li>
-            <a href="#" className="uppercase text-dark-grey text-base">
+            <a
+              href="#"
+              className="uppercase text-dark-grey text-xs sm:text-base"
+            >
               Условия покупки
             </a>
           </li>
           <li>
-            <a href="#" className="uppercase text-dark-grey text-base">
+            <a
+              href="#"
+              className="uppercase text-dark-grey text-xs sm:text-base"
+            >
               Доставка и возврат
             </a>
           </li>
         </ul>
-        <div className="mb-12 border-b border-black flex flex-col relative">
+        <div className="sm:mb-12 border-b border-black flex flex-col relative order-first sm:order-last">
           <label
-            className="top-0 left-0 text-base text-dark-grey absolute z-10 -translate-y-2"
+            className="top-0 left-0 text-sm sm:text-base text-dark-grey absolute z-10 -translate-y-2"
             htmlFor="subscribe"
           >
             Ваш email для акций и предложений
           </label>
           <svg
             className="fill-dark-grey absolute right-0"
-            width="25"
-            height="9"
+            width={15}
+            height={8}
             viewBox="0 0 25 9"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path d="M0 4.99124V3.74124C0 3.39606 0.279908 3.11624 0.625193 3.11624H20.0062V0.616238C20.0097 0.366191 20.1619 0.142308 20.3933 0.0470931C20.6246 -0.0481216 20.8904 0.00366328 21.069 0.178738L24.8201 3.92874C25.0599 4.17601 25.0599 4.56897 24.8201 4.81624L21.069 8.56624C20.8887 8.74287 20.6199 8.79382 20.3875 8.69542C20.1551 8.59702 20.0047 8.36856 20.0062 8.11624V5.61624H0.625193C0.279908 5.61624 0 5.33642 0 4.99124Z" />
           </svg>
           <input
-            className="text-base w-99"
+            className="text-sm sm:text-base w-99"
             type="email"
             name="subscribe"
             id="subscribe"
           />
         </div>
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between flex-col sm:flex-row">
         <p className="text-base text-black">© 2024 Shoppe</p>
-        <ul className="flex gap-7">
+        <ul className="flex gap-7 order-first sm:order-last mb-6 sm:mb-0">
           <li>
             <a href="#" target="_blank">
               <Image

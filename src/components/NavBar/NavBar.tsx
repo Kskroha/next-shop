@@ -1,5 +1,5 @@
 "use client";
-import { RefObject, useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import NavLink from "../NavLink/NavLink";
 import Search from "../Search/Search";
 
