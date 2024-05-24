@@ -19,13 +19,13 @@ const Card = (props: Props) => {
   return (
     <Link className="relative card" href={`/catalog/${String(sku)}`}>
       <Image
-        className="mb-4 rounded sm:rounded-lg w-[136px] h-[136px] sm:w-[377px] sm:h-[377px]"
+        className="mb-4 rounded sm:rounded-lg w-[136px] h-[136px] sm:w-[255px] sm:h-[255px] xl:w-[344px] xl:h-[344px] 2xl:w-[377px] 2xl:h-[377px]"
         src={src}
         alt={name}
         width={377}
         height={377}
       />
-      <div className="absolute flex gap-7 top-0 left-0 justify-center overlay bg-white/60 w-[136px] h-[136px] sm:w-[377px] sm:h-[377px]">
+      <div className="md:absolute flex gap-7 top-0 left-0 justify-center overlay bg-white/60 w-[136px] h-[136px] sm:w-[255px] sm:h-[255px] xl:w-[344px] xl:h-[344px] 2xl:w-[377px] 2xl:h-[377px]">
         <button>
           <svg
             width="30"
@@ -107,6 +107,9 @@ const Card = (props: Props) => {
             : `$ ${price},00`}
         </span>
       </div>
+      <button className="bg-gold text-white p-2 w-full md:hidden rounded-sm sm:rounded mt-2">
+        Добавить в корзину
+      </button>
     </Link>
   );
 };

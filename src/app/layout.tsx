@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
-import "./globals.css";
+
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import { ToastContainer } from "react-toastify";
+import { Flip } from "react-toastify";
+
+import "./globals.css";
+import "react-toastify/dist/ReactToastify.css";
 
 export const metadata: Metadata = {
   title: "Shoppe",
@@ -21,6 +26,19 @@ export default function RootLayout({
           {children}
           <Footer />
         </div>
+        <ToastContainer
+          position="bottom-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+          transition={Flip}
+        />
       </body>
     </html>
   );

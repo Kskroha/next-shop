@@ -1,6 +1,10 @@
-const Search = () => {
+type SearchProps = {
+  className?: string;
+};
+
+const Search = ({ className }: SearchProps) => {
   return (
-    <div className="relative">
+    <div className={`relative ${className}`}>
       <input
         type="search"
         className="bg-light-grey rounded min-w-72 w-full h-8 p-2.5 pl-7 placeholder:text-sm placeholder:text-dark-grey"

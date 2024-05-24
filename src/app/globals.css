@@ -80,9 +80,16 @@
 }
 
 .overlay {
-  visibility: hidden;
+  display: none;
 }
 
-.card:hover .overlay {
-  visibility: visible;
+@media (min-width: 768px) {
+  .overlay {
+    display: flex;
+    visibility: hidden;
+  }
+
+  .card:hover .overlay {
+    visibility: visible;
+  }
 }

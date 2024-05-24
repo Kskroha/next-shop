@@ -3,12 +3,10 @@ type Props = {
   handleMenuButtonClick: () => void;
 };
 
-const BurgerButton = (props: Props) => {
-  const { menuOpen, handleMenuButtonClick } = props;
-
+const BurgerButton = ({ menuOpen, handleMenuButtonClick }: Props) => {
   return (
     <button
-      className="flex flex-col gap-1 sm:hidden ml-4"
+      className="flex flex-col gap-1 md:hidden ml-4"
       onClick={handleMenuButtonClick}
     >
       <span className="visually-hidden">Открыть меню</span>

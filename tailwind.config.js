@@ -13,8 +13,10 @@ module.exports = {
       body: ["DMSans", "Arial", "sans-serif"],
     },
     gridTemplateColumns: {
-      3: "repeat(auto-fit, minmax(380px, 1fr))",
-      2: "repeat(auto-fit, minmax(136px, 1fr))",
+      "2xl": "repeat(auto-fit, minmax(380px, 1fr))",
+      xl: "repeat(auto-fit, minmax(344px, 1fr))",
+      lg: "repeat(auto-fit, minmax(255px, 1fr))",
+      sm: "repeat(auto-fit, minmax(136px, 1fr))",
     },
     extend: {
       colors: {

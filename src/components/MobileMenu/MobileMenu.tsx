@@ -17,9 +17,10 @@ const MobileMenu = (props: Props) => {
 
   return (
     <nav
-      className={`flex justify-center fixed top-[52px] right-0 z-10 bg-white w-full h-screen pb-10 ${
-        menuOpen ? "sm:hidden" : "hidden"
-      }`}
+      className={`flex justify-center fixed top-[52px] right-0 z-10 bg-white w-full h-screen pb-10 transition transform ease-in-out duration-500 md:hidden`}
+      style={{
+        transform: menuOpen ? "translateX(0)" : "translateX(100%)",
+      }}
     >
       <div className="w-10/12">
         <Search />

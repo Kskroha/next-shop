@@ -17,7 +17,7 @@ const Header = () => {
     <header className="py-4 sm:py-5 flex self-auto justify-between items-center sans sm:border-b border-px border-neutral sm:relative">
       <Link href={"/"} className="">
         <Image
-          className="w-24 h-5 sm:w-40 sm:h-12"
+          className="w-24 h-5 md:w-40 md:h-12"
           src={"/logo.svg"}
           alt="Логотип магазина"
           width={158}

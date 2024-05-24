@@ -4,6 +4,7 @@ import dataSlider from "@/components/Slider/slider-data.json";
 import Link from "next/link";
 import { API } from "./api/api";
 import Search from "@/components/Search/Search";
+import { toast } from "react-toastify";
 
 const getProducts = async () => {
   const res = await fetch(`${API.products.get}?limit=6&offset=0`);
@@ -40,7 +41,7 @@ export default async function Home() {
             Все
           </Link>
         </div>
-        <div className="grid gap-y-6 gap-x-4 sm:gap-y-12 sm:gap-x-20 grid-cols-2 sm:grid-cols-3">
+        <div className="grid gap-y-6 gap-x-4 sm:gap-y-10 sm:gap-x-18 justify-items-center grid-cols-sm sm:grid-cols-lg xl:grid-cols-xl 2xl:grid-cols-2xl">
           {products &&
             products.map((product: Product) => (
               <Card

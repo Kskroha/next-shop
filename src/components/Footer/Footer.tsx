@@ -4,9 +4,9 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="py-4 sm:pt-9 sm:pb-24 sm:border-t border-px border-neutral">
-      <div className="flex flex-col sm:flex-row justify-between sm:items-end mb-9 sm-mb-0 gap-5 sm:gap-0">
-        <ul className="flex flex-col sm:flex-row gap-2 sm:gap-7 sm:mb-12">
+    <footer className="py-4 sm:pt-9 lg:pb-24 sm:border-t border-px border-neutral">
+      <div className="flex flex-col lg:flex-row sm:items-start lg:justify-between mb-9 sm-mb-0 gap-5 lg:gap-0">
+        <ul className="flex flex-col flex-wrap sm:flex-row gap-2 sm:gap-9 lg:gap-7 lg:mb-12 pr-4">
           <li>
             <a
               href="#"
@@ -32,7 +32,7 @@ const Footer = () => {
             </a>
           </li>
         </ul>
-        <div className="sm:mb-12 border-b border-black flex flex-col relative order-first sm:order-last">
+        <div className=" md:mb-4 lg:mb-12 border-b border-black flex flex-col relative order-first lg:order-last sm:max-w-96">
           <label
             className="top-0 left-0 text-sm sm:text-base text-dark-grey absolute z-10 -translate-y-2"
             htmlFor="subscribe"
@@ -58,7 +58,7 @@ const Footer = () => {
       </div>
       <div className="flex justify-between flex-col sm:flex-row">
         <p className="text-base text-black">© 2024 Shoppe</p>
-        <ul className="flex gap-7 order-first sm:order-last mb-6 sm:mb-0">
+        <ul className="flex flex-wrap max-w-99 gap-7 order-first sm:order-last mb-6 sm:mb-0">
           <li>
             <a href="#" target="_blank">
               <Image

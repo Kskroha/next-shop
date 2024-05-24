@@ -10,16 +10,24 @@ const Navbar = () => {
   const handleSearchButtonClick = () => setSearchActive(true);
 
   return (
-    <nav className="after:absolute after:top-1/4 after:left-52 after:w-px after:h-4 after:bg-dark-grey after:md:block after:sm:hidden items-center md:gap-24 sm:gap-20 relative sm:flex ml-auto sm:ml-0">
-      <div className="sm:flex sm:gap-7 md:gap-12 hidden">
-        <NavLink href={"/catalog"} hasIcon={false} text={"Магазин"} />
+    <nav
+      className={`after:absolute after:top-1/4 after:left-52 after:w-px after:h-4 after:bg-dark-grey after:sm:hidden items-center md:gap-24 sm:gap-20 relative sm:flex ml-auto md:ml-0 ${
+        searchActive ? "after:md:hidden" : "after:md:block"
+      }`}
+    >
+      <div
+        className={`sm:gap-7 md:gap-12 hidden ${
+          searchActive ? "md:hidden" : "md:flex"
+        }`}
+      >
+        <NavLink href={"/catalog"} hasIcon={false} text={"Каталог"} />
         <NavLink href={"/about"} hasIcon={false} text={"О нас"} />
       </div>
       <div className="flex sm:items-center sm:gap-7">
         <div>
-          {searchActive && <Search />}
+          {searchActive && <Search className="hidden md:block" />}
           <button
-            className={`${searchActive ? "hidden" : "hidden sm:block"}`}
+            className={`${searchActive ? "hidden" : "hidden md:block"}`}
             onClick={handleSearchButtonClick}
           >
             <svg
@@ -48,7 +56,7 @@ const Navbar = () => {
           src={"/cart.svg"}
           length={3}
         />
-        <div className="hidden sm:block">
+        <div className="hidden md:block">
           <CountButton
             href={"/favorites"}
             text={"Избранное"}
@@ -56,7 +64,7 @@ const Navbar = () => {
             length={100}
           />
         </div>
-        <div className="hidden sm:block">
+        <div className="hidden md:block">
           <NavLink
             href={"/profile"}
             hasIcon={true}
